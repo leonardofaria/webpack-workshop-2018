@@ -9,7 +9,9 @@ module.exports = {
   },
   plugins: [
     new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
   ],
   module: {
     rules: [
@@ -25,5 +27,8 @@ module.exports = {
         ]
       }
     ]
+  },
+  externals: {
+    jquery: 'jQuery'
   }
 }
