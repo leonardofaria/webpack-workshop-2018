@@ -1,5 +1,3 @@
-const lodash = (() => require("lodash-es"))();
-
 import {a} from "./bar";
 import imgSrc from "./icon-square-small.jpg";
 import "./index.css";
