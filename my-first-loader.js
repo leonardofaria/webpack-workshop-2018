@@ -1,4 +1,5 @@
 module.exports = function loader(src) {
-  debugger;
-  return src;
+  const newSource = src.replace(".log", ".error")
+
+  return newSource;
 }
