@@ -1,5 +1,6 @@
 module.exports = function loader(src) {
-  const newSource = src.replace(".log", ".error")
+  const callback = this.async();
+  const newSource = src.replace(".log", ".error");
 
-  return newSource;
+  callback(null, newSource);
 }
