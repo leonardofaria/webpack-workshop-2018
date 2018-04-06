@@ -1,6 +1,7 @@
 import {a} from "./bar";
 import imgSrc from "./icon-square-small.jpg";
 import "./index.css";
+import { debug } from "util";
 // import foo from "./foo";
 const foo = () => import("./foo").then(m => m.default); // Use the default export when the promise is resolved
 
@@ -21,9 +22,9 @@ button.addEventListener("click", e => {
     // debugger;
   });
 
-  import("date-fns").then(({ addDays }) => {
+  import("date-fns/add_days").then((addDays) => {
     const today = new Date();
-    console.log(addDays(today, 1));
+    console.log(addDays.default(today, 1));
   })
 });
 
