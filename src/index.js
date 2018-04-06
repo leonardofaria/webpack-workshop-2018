@@ -26,3 +26,22 @@ button.addEventListener("click", e => {
     console.log(addDays(today, 1));
   })
 });
+
+const select = document.createElement('div');
+select.innerHTML = `
+<select>
+  <option></option>
+  <option value="a">A Theme</option>
+  <option value="b">B Theme</option>
+</select>
+`;
+
+document.body.appendChild(select);
+
+const getTheme = (themeName) => import(`./themes/${themeName}`);
+
+select.firstElementChild.addEventListener('change', ({target: {value}}) => {
+  getTheme(value).then((themeModule) => {
+    themeModule.default();
+  })
+})
