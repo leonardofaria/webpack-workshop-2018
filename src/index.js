@@ -1,9 +1,12 @@
 import {a} from "./bar";
 import imgSrc from "./icon-square-small.jpg";
 import "./index.css";
+import jk from "./js.txt";
 import { debug } from "util";
 // import foo from "./foo";
 const foo = () => import("./foo").then(m => m.default); // Use the default export when the promise is resolved
+
+jk();
 
 console.log(imgSrc)
 
