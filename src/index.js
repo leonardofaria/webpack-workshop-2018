@@ -19,5 +19,10 @@ button.addEventListener("click", e => {
     // You can use the module
     console.log(module); // [1, 3, 4, 5, 6, 7]
     // debugger;
+  });
+
+  import("date-fns").then(({ addDays }) => {
+    const today = new Date();
+    console.log(addDays(today, 1));
   })
 });
