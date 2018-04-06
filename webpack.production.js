@@ -13,9 +13,5 @@ module.exports = {
                 "css-loader"
             ]}
         ]
-    },
-    performance: {
-      maxEntrypointSize: 200,
-      hints: "error",
     }
 }
