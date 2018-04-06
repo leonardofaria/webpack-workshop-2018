@@ -17,11 +17,20 @@ module.exports = {
                 test: /\.jpg$/,
                 use: [
                     {
-                        loader: "url-loader", 
+                        loader: "url-loader",
                         options: {limit: 10000}
                     }
                 ]
-            }
+            },
+            {
+              test: /\.js$/,
+              use: [
+                  {
+                    loader: "babel-loader",
+                    exclude: [/node_modules/]
+                  }
+              ]
+          }
         ]
     }
 };
