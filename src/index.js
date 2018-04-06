@@ -1,6 +1,7 @@
 import { uniq } from "lodash-es";
 import leftPad from 'left-pad';
 import rightPad from 'right-pad';
+import $ from 'jquery';
 
 export default uniq([1, 3, 4, 4, 5, 6, 7]);
 
