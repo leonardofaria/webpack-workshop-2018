@@ -1,3 +1,5 @@
+const trickyUglify = (() => require("lodash-es"))()
+
 import {a} from "./bar";
 import imgSrc from "./icon-square-small.jpg";
 import "./index.css";
