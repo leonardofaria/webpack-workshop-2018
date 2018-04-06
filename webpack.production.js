@@ -1,8 +1,13 @@
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     plugins: [
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new webpack.optimize.AggressiveSplittingPlugin({
+            minSize: 1000,
+            maxSize: 6000
+        })
     ],
     module: {
         rules: [
