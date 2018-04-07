@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MyFirstWebpackPlugin = require("./MyFirstWebpackPlugin");
 
 module.exports = {
     output: {
@@ -9,7 +10,8 @@ module.exports = {
     },
     plugins: [
         new webpack.ProgressPlugin(),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin(),
+        MyFirstWebpackPlugin()
     ],
     module: {
         rules: [
